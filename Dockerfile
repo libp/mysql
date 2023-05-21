@@ -27,4 +27,5 @@ COPY db_init.sh /root/
 VOLUME /var/lib/mysql
 
 CMD /root/db_init.sh
+WORKDIR /var/lib/mysql
 EXPOSE 3306
