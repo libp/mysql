@@ -1,9 +1,8 @@
 FROM ubuntu:22.10
 
-# set LANG,TZ    
+# set LANG,TZ,user,passwd
 ENV LANG C.UTF-8
 ENV TZ=Asia/Shanghai
-# set user,passwd,delete cached
 ENV MARIADB_USER root
 ENV MARIADB_PASS 111111
 
@@ -20,7 +19,6 @@ COPY my.cnf /etc/mysql/mariadb.cnf
 COPY db_init.sh /root/
 
 VOLUME /var/lib/mysql
-
 CMD /root/db_init.sh
-WORKDIR /var/lib/mysql
+WORKDIR /root
 EXPOSE 3306
