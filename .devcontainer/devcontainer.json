@@ -1,28 +1,27 @@
-{
-    "name": "CodeSpace",
-    "dockerFile": "Dockerfile",
-    "updateContentCommand": "",
-    "postCreateCommand": "",
-    "postAttachCommand": {
-    "server": "sh /root/db_init.sh &"
-    },
-    "customizations": {
-      "codespaces": {
-        "openFiles": [
-          "README.md"
-        ]
-      }
-    },
-    "portsAttributes": {
-        "3306": {
-          "label": "Application",
-          "onAutoForward": "openPreview"
-        }
-      },
-      "forwardPorts": [3306]
-}
+// {
+//     "name": "CodeSpace",
+//     "dockerFile": "../Dockerfile",
+//     "updateContentCommand": "",
+//     "postCreateCommand": "",
+//     "postAttachCommand": {
+//     "server": "sh /root/db_init.sh &"
+//     },
+//     "customizations": {
+//       "codespaces": {
+//         "openFiles": [
+//           "db_init.sh"
+//         ]
+//       }
+//     },
+//     "portsAttributes": {
+//         "3306": {
+//           "label": "Application",
+//           "onAutoForward": "openPreview"
+//         }
+//       },
+//       "forwardPorts": [3306]
+// }
 
 
 
-
-// {"image":"docker.io/libp/wordpress:wp61_v4"}
+{"image":"libp/mariadb:v1.2"}

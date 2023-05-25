@@ -1,6 +1,7 @@
 #!/bin/bash
 
 set -e
+chmod 644 /etc/mysql/my.cnf
 
 # if [ `mysqlshow|wc -l` -eq 8 ]; then
 if [ -z "$(ls -A /var/lib/mysql)" ]; then
@@ -21,3 +22,5 @@ fi
 
 # echo "keep program running in the background"
 # tail -f /dev/null
+
+
